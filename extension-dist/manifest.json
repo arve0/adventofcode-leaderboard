@@ -1,0 +1,13 @@
+{
+    "name": "adventofcode-leaderboard",
+    "description": "Leaderboard for Advent of Code events",
+    "version": "0.0.1",
+    "content_scripts": [
+      {
+        "matches": ["https://adventofcode.com/*"],
+        "js": ["bundle.js"],
+        "css": ["bundle.css"]
+      }
+    ],
+    "manifest_version": 2
+}
