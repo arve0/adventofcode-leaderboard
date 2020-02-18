@@ -2,6 +2,10 @@ import App from './App.svelte';
 import { _ } from "./utils"
 
 if (is_private_leaderboard() && get_api_url()) {
+	// remove any svelte components
+	document.querySelectorAll('[class^="svelte-"]').forEach(e => e.remove())
+	document.querySelectorAll('[class*=" svelte-"]').forEach(e => e.remove())
+
 	const app = new App({
 		target: document.body,
 		props: {
