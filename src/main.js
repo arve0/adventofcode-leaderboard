@@ -2,7 +2,6 @@ import App from './App.svelte';
 import { _ } from "./utils"
 
 if (is_private_leaderboard() && get_api_url()) {
-	add_style("bundle.css")
 	const app = new App({
 		target: document.body,
 		props: {
@@ -52,12 +51,4 @@ function get_api_url() {
 	return location.host.includes("localhost")
 		? `https://cors.seljebu.no/https://adventofcode.com${href}`
 		: `https://adventofcode.com${href}`
-}
-
-function add_style(href) {
-    var style = document.createElement("link");
-    style.rel = "stylesheet";
-    style.type = "text/css";
-    style.href = href;
-    document.head.appendChild(style);
 }
